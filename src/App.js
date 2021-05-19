@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { host } from './config.js';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState(null);
+
   const getData = async () => {
     try {
-      const data = await fetch('http://localhost:3001/');
+      const data = await fetch(`${host}`);
       const messageData = await data.json();
-      console.log(messageData);
+      setData(messageData);
     } catch (error) {
       console.log(error);
     }
@@ -15,6 +18,7 @@ function App() {
 
   useEffect(() => {
     getData();
+    console.log(data);
   }, []);
 
   return (
@@ -32,6 +36,7 @@ function App() {
         >
           Learn React
         </a>
+        <p>{!data ? 'Nothing' : data.message}</p>
       </header>
     </div>
   );
