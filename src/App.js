@@ -11,6 +11,7 @@ function App() {
       const data = await fetch(`${host}`);
       const messageData = await data.json();
       setData(messageData);
+      console.log(host);
     } catch (error) {
       console.log(error);
     }
