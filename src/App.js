@@ -1,7 +1,22 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const getData = async () => {
+    try {
+      const data = await fetch('http://localhost:3001/');
+      const messageData = await data.json();
+      console.log(messageData);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
