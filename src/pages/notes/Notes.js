@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { host } from '../../config.js';
 import Nav from '../../components/nav/Nav';
 import Note from '../../components/note/Note';
+import './notes.css';
 
 const Notes = () => {
   const [data, setData] = useState({message: 'Loading from Heroku'});
@@ -41,7 +42,9 @@ const Notes = () => {
       <Nav />
       <h1>All your notes</h1>
       <p>Is the server connected? {data.message}</p>
-      {notes.map(note => <Note key={note.id} message={note.message}/>)}
+      <div className="notes-div">
+        {notes.map(note => <Note key={note.id} message={note.message}/>)}
+      </div>
     </section>
   )
 }
