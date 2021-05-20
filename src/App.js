@@ -1,32 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { host } from './config.js';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import { host } from './config.js';
 import './App.css';
+import Welcome from './pages/welcome/Welcome';
+import About from './pages/about/About';
+import Instructions from './pages/instructions/Instructions';
+import Notes from './pages/notes/Notes';
 
 function App() {
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  const getData = async () => {
-    try {
-      const data = await fetch(`${host}`);
-      const messageData = await data.json();
-      setData(messageData);
-      console.log(host);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // const getData = async () => {
+  //   try {
+  //     const data = await fetch(`${host}`);
+  //     const messageData = await data.json();
+  //     setData(messageData);
+  //     console.log(host);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
-  useEffect(() => {
-    getData();
-    console.log(data);
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  //   console.log(data);
+  // }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{!data ? 'Nothing' : data.message}</p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          {/* <p>{!data ? 'Nothing' : data.message}</p> */}
+          <Route path="/" exact component={Welcome} />
+          <Route path="/about" component={About} />
+          <Route path="/instructions" component={Instructions} />
+          <Route path="/notes" component={Notes} />
+        </header>
+      </div>
+    </Router>
   );
 }
 
