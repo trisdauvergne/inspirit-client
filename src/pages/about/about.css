@@ -1,13 +1,3 @@
-.intro {
-  text-shadow:
-    0 0 6px rgba(255, 255, 255, 0.2),
-    0 0 30px rgba(255, 255, 255, 0.2),
-    0 0 12px rgba(255, 255, 255, 0.2),
-    0 0 21px rgba(30,132,242,0.2),
-    0 0 34px rgba(255, 255, 255, 0.2),
-    0 0 54px rgba(255, 255, 255, 0.2);
-}
-
 .intro__txt {
   color: white;
   font-weight: 300;

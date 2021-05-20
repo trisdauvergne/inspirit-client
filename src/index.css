@@ -38,6 +38,16 @@ html {
   top: 35%;
 }
 
+.intro-pages--less-margin {
+  top: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-pages--less-margin {
+    top: 25%;
+  }
+}
+
 .fade-in {
   animation: fadein 2s;
 }
@@ -53,14 +63,20 @@ html {
   text-align: center;
   color: white;
   letter-spacing: -3px;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 12px rgba(255, 255, 255, 0.2),
+    0 0 21px rgba(30,132,242,0.2),
+    0 0 34px rgba(255, 255, 255, 0.2),
+    0 0 54px rgba(255, 255, 255, 0.2);
 }
 
-.extra-spacing {
-  line-height: 2.5rem;
+body {
+  font-family: 'DM Sans', sans-serif;
 }
 
 .standard-btn, .intro__txt {
-  font-family: 'DM Sans', sans-serif;
   color: white;
 }
 
