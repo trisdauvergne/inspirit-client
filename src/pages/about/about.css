@@ -1,9 +1,5 @@
-/* .about {
-  animation: fadein 2s;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  top: 35%;
-} */
+.intro__txt {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}

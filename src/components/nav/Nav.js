@@ -5,8 +5,8 @@ import { host } from '../../config.js';
 import './nav.css';
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [formOpen, setFormOpen] = useState(false);
+  const [instructionsOpen, setInstructionsOpen] = useState(false);
   const [newMessage, setNewMessage] = useState({message: ''});
 
   const handleSubmit = async (e) => {
@@ -24,23 +24,33 @@ const Nav = () => {
     setNewMessage({
       message: ''
     });
-    setIsOpen(false);
+    setFormOpen(false);
     window.location.reload(true);
   }
 
   return (
     <nav className="nav">
-      <h1>Navbar</h1>
-      <Link to="/instructions"><button>Back to instructions</button></Link>
+      <h1>Inspirit</h1>
+      {/* <Link to="/instructions"><button>Back to instructions</button></Link> */}
+      <button onClick={() => setInstructionsOpen(true)}>What to do</button>
       <Link to="/about"><button>About Inspirit</button></Link>
-      <button className="button" onClick={() => setIsOpen(true)}>Add a note</button>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <form onSubmit={handleSubmit}>
-          <p>Write down something great about yourself in the box below</p>
-          <p>(You can even paste a link to a video or pictures)</p>
-          <input type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
-          <button type="submit">Submit</button>
-        </form>
+      <button className="button" onClick={() => setFormOpen(true)}>Add a note</button>
+      <Modal open={formOpen} onClose={() => setFormOpen(false)}>
+        <div className="modal-form">
+          <button onClick={() => setFormOpen(false)}>Close modal</button>
+          <form onSubmit={handleSubmit}>
+            <p>Write down something great about yourself in the box below</p>
+            <p>(You can even paste a link to a video or pictures)</p>
+            <input type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </Modal>
+      <Modal open={instructionsOpen} onClose={() => setInstructionsOpen(false)}>
+        <div className="modal-form">
+          <button onClick={() => setInstructionsOpen(false)}>Close modal</button>
+          <p>Click on the add a note button and write yourself something nice</p>
+        </div>
       </Modal>
     </nav>
   )
