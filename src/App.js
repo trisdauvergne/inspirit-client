@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { host } from './config.js';
 import './App.css';
+import Welcome from '../src/pages/welcome/Welcome';
 
 function App() {
   const [data, setData] = useState(null);
@@ -22,11 +24,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{!data ? 'Nothing' : data.message}</p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <p>{!data ? 'Nothing' : data.message}</p>
+          <Welcome />
+        </header>
+      </div>
+    </Router>
   );
 }
 
