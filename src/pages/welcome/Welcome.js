@@ -5,9 +5,8 @@ import './welcome.css';
 const Welcome = () => {
   return (
     <section className="section intro-pages fade-in">
-      <h1>Welcome page</h1>
-      <h2>Need some encouragement</h2>
-      <Link to="/about"><button>Enter</button></Link>
+      <h1 className="heading">Need some encouragement?</h1>
+      <Link to="/about"><button className="standard-btn">Enter</button></Link>
     </section>
   )
 }

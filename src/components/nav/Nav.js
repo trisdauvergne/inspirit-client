@@ -35,12 +35,15 @@ const Nav = () => {
       <Link to="/about"><button>About Inspirit</button></Link>
       <button className="button" onClick={() => setIsOpen(true)}>Add a note</button>
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <form onSubmit={handleSubmit}>
-          <p>Write down something great about yourself in the box below</p>
-          <p>(You can even paste a link to a video or pictures)</p>
-          <input type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
-          <button type="submit">Submit</button>
-        </form>
+        <div className="modal-form">
+          <button onClick={() => setIsOpen(false)}>Close modal</button>
+          <form onSubmit={handleSubmit}>
+            <p>Write down something great about yourself in the box below</p>
+            <p>(You can even paste a link to a video or pictures)</p>
+            <input type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </Modal>
     </nav>
   )

@@ -21,7 +21,7 @@ const Modal = ({ open, children, onClose }) => {
       <div style={OVERLAY_STYLES}></div>
       <div className="modal-style">
         {children}
-        <button onClick={onClose}>Close Modal</button>
+        {/* <button onClick={onClose}>Close Modal</button> */}
       </div>
     </>,
     document.getElementById('portal')
