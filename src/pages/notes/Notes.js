@@ -25,7 +25,7 @@ const Notes = () => {
     <section className="section notes">
       <Nav />
       <h1>All your notes</h1>
-      <p>Is the server connected? {data.message}</p>
+      <p>Is the server connected? {!data ? 'Loading' : data.message}</p>
     </section>
   )
 }
