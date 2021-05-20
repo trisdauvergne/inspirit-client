@@ -24,6 +24,7 @@ const Nav = () => {
     setNewMessage({
       message: ''
     });
+    setIsOpen(false);
   }
 
   return (
