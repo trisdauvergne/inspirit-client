@@ -7,10 +7,10 @@ const About = () => {
     <section className="section">
       <Link to="/"><button>Back</button></Link>
       <section className="intro-pages fade-in">
-        <h1 className="heading">Inspirit</h1>
-        <h3>verb (used with object)</h3>
-        <h3>to infuse spirit or life into; enliven.</h3>
-        <Link to="/instructions"><button className="standard-btn">Instructions</button></Link>
+        <h1 className="heading intro">Inspirit</h1>
+        <h3 className="intro__txt">verb (used with object)</h3>
+        <h3 className="intro__txt">to infuse spirit or life into; enliven.</h3>
+        <Link to="/instructions"><button className="standard-btn">Continue</button></Link>
       </section>
     </section>
   )

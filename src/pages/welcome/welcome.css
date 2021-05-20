@@ -4,11 +4,15 @@ font-family: 'DM Sans', sans-serif; */
 
 
 .welcome {
-  font-size: 5rem;
   font-weight: 700;
   line-height: 1;
-  color: white;
   animation: neon 0.9s ease-in-out infinite alternate;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome {
+    font-size: 9rem;
+  }
 }
 
 @keyframes neon {

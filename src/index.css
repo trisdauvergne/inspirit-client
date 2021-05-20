@@ -47,33 +47,33 @@ html {
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: 'Hind', sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: white;
+  letter-spacing: -3px;
 }
 
 .extra-spacing {
   line-height: 2.5rem;
 }
 
-.standard-btn {
+.standard-btn, .intro__txt {
   font-family: 'DM Sans', sans-serif;
+  color: white;
+}
+
+.standard-btn {
+  text-transform: uppercase;
   font-size: 2rem;
   padding: 0.75rem;
   background-color: transparent;
-  color: white;
   font-weight: 400;
-  border: none;
+  border: 0.25px rgba(255,255,255,0.3) solid;
 }
 
-.standard-btn:hover {
-  font-weight: 700;
-  animation: neon 0.05s ease-in-out infinite alternate;
-  cursor: pointer;
-}
-
+/* Keyframes for heading neon */
 @keyframes neon {
   from {
     text-shadow:
@@ -94,3 +94,11 @@ html {
     0 0 60px rgb(255, 255, 255);
   }
 }
+
+.standard-btn:hover {
+  font-weight: 700;
+  animation: neon 0.05s ease-in-out infinite alternate;
+  border: 0.25px rgba(255,255,255,0.7) solid;
+  cursor: pointer;
+}
+
