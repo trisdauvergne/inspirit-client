@@ -4,6 +4,8 @@ import { host } from './config.js';
 import './App.css';
 import Welcome from './pages/welcome/Welcome';
 import About from './pages/about/About';
+import Instructions from './pages/instructions/Instructions';
+import Home from './pages/home/Home';
 
 function App() {
   const [data, setData] = useState(null);
@@ -31,6 +33,8 @@ function App() {
           <p>{!data ? 'Nothing' : data.message}</p>
           <Route path="/" exact component={Welcome} />
           <Route path="/about" component={About} />
+          <Route path="/instructions" component={Instructions} />
+          <Route path="/home" component={Home} />
         </header>
       </div>
     </Router>
