@@ -33,7 +33,6 @@ const Notes = () => {
   useEffect(() => {
     getData();
     getNotes();
-    console.log(notes);
   }, []);
 
   return (
