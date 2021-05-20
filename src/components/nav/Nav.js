@@ -25,6 +25,7 @@ const Nav = () => {
       message: ''
     });
     setIsOpen(false);
+    window.location.reload(true);
   }
 
   return (
