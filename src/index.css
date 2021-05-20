@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +16,10 @@ html {
   left:0;
   right:0;
   z-index:-1;
-  background-image: url('https://images.unsplash.com/photo-1514810771018-276192729582?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
+  /* background-image: url('https://images.unsplash.com/photo-1514810771018-276192729582?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80'); */
+  /* background-image: url('https://images.unsplash.com/photo-1608716969705-279f56774c0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80'); */
+  /* background-image: url('https://images.unsplash.com/photo-1617460647086-92d928f9f0ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80'); */
+  background-image: url('https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2862&q=80');
   background-size: cover;
   background-attachment: fixed;
 }
@@ -39,20 +46,12 @@ html {
   animation: fadein 3s;
 }
 
-body {
-  color: #000034;;
-}
-
-h1, h3 {
-  font-family: 'Amatic SC', cursive;
-}
-
 .heading {
   font-size: 4rem;
-}
-
-.sub-heading {
-  font-size: 1.5rem;
+  font-family: 'Hind', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
 }
 
 .extra-spacing {
@@ -60,15 +59,38 @@ h1, h3 {
 }
 
 .standard-btn {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'DM Sans', sans-serif;
   font-size: 2rem;
   padding: 0.75rem;
   background-color: transparent;
-  color: #000034;
+  color: white;
+  font-weight: 400;
+  border: none;
+}
+
+.standard-btn:hover {
   font-weight: 700;
-  border-top-left-radius: 255px 25px;
-  border-top-right-radius: 25px 225px;
-  border-bottom-right-radius: 225px 25px;
-  border-bottom-left-radius: 25px 255px;
-  border: 1px #000034 solid;
+  animation: neon 0.05s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 12px rgba(255, 255, 255, 0.2),
+    0 0 21px rgba(30,132,242,0.2),
+    0 0 34px rgba(255, 255, 255, 0.2),
+    0 0 54px rgba(255, 255, 255, 0.2);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 12px rgba(255, 255, 255, 0.2),
+    0 0 22px rgba(30,132,242,0.2),
+    0 0 38px rgba(30,132,242,0.2),
+    0 0 60px rgb(255, 255, 255);
+  }
 }
