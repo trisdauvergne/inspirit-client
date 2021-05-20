@@ -3,7 +3,7 @@ import { host } from '../../config.js';
 import Nav from '../../components/nav/Nav';
 
 const Notes = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({message: 'Loading from Heroku'});
 
   const getData = async () => {
     try {
@@ -25,7 +25,7 @@ const Notes = () => {
     <section className="section notes">
       <Nav />
       <h1>All your notes</h1>
-      <p>Is the server connected? {!data ? 'Loading' : data.message}</p>
+      <p>Is the server connected? {data.message}</p>
     </section>
   )
 }
