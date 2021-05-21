@@ -4,7 +4,7 @@
 }
 
 .notes-div {
-  border: 2px dashed blue;
+  /* border: 2px dashed blue; */
   /* width: 100%; */
   display: flex;
   flex-direction: row;

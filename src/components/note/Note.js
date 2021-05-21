@@ -4,7 +4,7 @@ import './note.css';
 const Note = ({ message }) => {
   return (
     <section className="note fade-in">
-      <p>{message}</p>
+      <p className="note__txt">{message}</p>
     </section>
   )
 }
