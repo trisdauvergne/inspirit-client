@@ -29,12 +29,15 @@ const Nav = () => {
   }
 
   return (
-    <nav className="nav">
-      <h1>Inspirit</h1>
-      {/* <Link to="/instructions"><button>Back to instructions</button></Link> */}
-      <button onClick={() => setInstructionsOpen(true)}>What to do</button>
-      <Link to="/about"><button>About Inspirit</button></Link>
-      <button className="button" onClick={() => setFormOpen(true)}>Add a note</button>
+    <nav className="header">
+      <div className="header-content">
+        <Link to="/"><h1 className="heading header-content__heading">Inspirit</h1></Link>
+        <div className="header-btns">
+          <Link to="/about"><button className="header-btn btn-hover">About Inspirit</button></Link>
+          <button className="header-btn btn-hover" onClick={() => setInstructionsOpen(true)}>What to do</button>
+          <button className="header-btn btn-hover" onClick={() => setFormOpen(true)}>Add a note</button>
+        </div>
+      </div>
       <Modal open={formOpen} onClose={() => setFormOpen(false)}>
         <div className="modal-form">
           <button onClick={() => setFormOpen(false)}>Close modal</button>
@@ -47,8 +50,8 @@ const Nav = () => {
         </div>
       </Modal>
       <Modal open={instructionsOpen} onClose={() => setInstructionsOpen(false)}>
-        <div className="modal-form">
-          <button onClick={() => setInstructionsOpen(false)}>Close modal</button>
+        <div className="modal-instructions">
+          <button className="modal-btn" onClick={() => setInstructionsOpen(false)}>x</button>
           <p>Click on the add a note button and write yourself something nice</p>
         </div>
       </Modal>
