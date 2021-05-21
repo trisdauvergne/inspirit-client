@@ -40,8 +40,7 @@ const Notes = () => {
   return (
     <section className="section notes">
       <Nav />
-      <h1>All your notes</h1>
-      <p>Is the server connected? {data.message}</p>
+      <p>Server connected: {data.message}</p>
       <div className="notes-div">
         {notes.map(note => <Note key={note.id} message={note.message}/>)}
       </div>
