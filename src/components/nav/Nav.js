@@ -39,18 +39,21 @@ const Nav = () => {
         </div>
       </div>
       <Modal open={formOpen} onClose={() => setFormOpen(false)}>
-        <div className="modal-form">
-          <button onClick={() => setFormOpen(false)}>Close modal</button>
+        <div className="modal modal-form">
+          <button  className="modal-btn" onClick={() => setFormOpen(false)}>X</button>
           <form onSubmit={handleSubmit}>
-            <p>Write down something great about yourself in the box below</p>
-            <p>(You can even paste a link to a video or pictures)</p>
-            <input type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
-            <button type="submit">Submit</button>
+            <p>Enter your message to yourself in the box below</p>
+            <br/>
+            <p>Or paste a link to a YouTube video</p>
+            <div className="modal-form-div">
+              <textarea className="modal-form__input" type="text" name="newmessage" value={newMessage.message} onChange={(e) => setNewMessage({message: e.target.value})} />
+              <button className="modal-submit-btn button" type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </Modal>
       <Modal open={instructionsOpen} onClose={() => setInstructionsOpen(false)}>
-        <div className="modal-instructions">
+        <div className="modal modal-instructions">
           <button className="modal-btn" onClick={() => setInstructionsOpen(false)}>x</button>
           <div className="modal-instructions__txt">
             <p>Use Inspirit to remind yourself of everything you have achieved when impostor syndrome creeps in.</p>
