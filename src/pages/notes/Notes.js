@@ -42,7 +42,7 @@ const Notes = () => {
       <Nav />
       <p>Server connected: {data.message}</p>
       <div className="notes-div">
-        {notes.map(note => <Note key={note.id} message={note.message}/>)}
+        {notes.map(note => <Note key={note.id} note={note}/>)}
       </div>
     </section>
   )
