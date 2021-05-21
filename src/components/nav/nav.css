@@ -41,13 +41,22 @@
 }
 
 .modal-instructions {
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
   background-color:rgba(255,255,255,0.6);
   padding: 1rem;
-  /* box-shadow: 5px 5px 15px rgba(240, 248, 255, 0.6); */
+  box-shadow: 5px 5px 15px rgba(240, 248, 255, 0.6);
   color: #001440;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-instructions {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color:rgba(255,255,255,0.7);
+  }
 }
 
 .modal-btn {
@@ -67,4 +76,8 @@
     0 0 21px rgba(118, 184, 255, 0.2),
     0 0 34px rgba(87, 71, 235, 0.2),
     0 0 54px rgba(255, 255, 255, 0.2);
+}
+
+.modal-instructions__txt {
+  padding: 1.5rem 0;
 }
