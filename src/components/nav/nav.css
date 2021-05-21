@@ -41,6 +41,30 @@
 }
 
 .modal-instructions {
-  background-color:#f0f8ff;
+  display: flex;
+  flex-direction: column;
+  background-color:rgba(255,255,255,0.6);
   padding: 1rem;
+  /* box-shadow: 5px 5px 15px rgba(240, 248, 255, 0.6); */
+  color: #001440;
+  font-size: 1.5rem;
+}
+
+.modal-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  align-self: flex-end;
+  color: #001440;
+}
+
+.modal-btn:hover {
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(38, 87, 194, 0.192),
+    0 0 30px rgba(40, 98, 223, 0.3),
+    0 0 12px rgba(116, 114, 255, 0.2),
+    0 0 21px rgba(118, 184, 255, 0.2),
+    0 0 34px rgba(87, 71, 235, 0.2),
+    0 0 54px rgba(255, 255, 255, 0.2);
 }

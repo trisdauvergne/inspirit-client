@@ -52,7 +52,10 @@ const Nav = () => {
       <Modal open={instructionsOpen} onClose={() => setInstructionsOpen(false)}>
         <div className="modal-instructions">
           <button className="modal-btn" onClick={() => setInstructionsOpen(false)}>x</button>
-          <p>Click on the add a note button and write yourself something nice</p>
+          <p>Use Inspirit to remind yourself of everything you have achieved when impostor syndrome creeps in</p>
+          <p>Click on the 'Add a note' button and leave yourself a note.</p>
+          <p>The note can be about something you are proud of or you are great at, or just messages to remind yourself of how great you are.</p>
+          <p>You can even paste a link to your favourite song. Just paste in the 'src' from a YouTube embed link.</p>
         </div>
       </Modal>
     </nav>

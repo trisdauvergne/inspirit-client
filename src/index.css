@@ -18,6 +18,11 @@ html {
   background-attachment: fixed;
 }
 
+body {
+  max-width: 1024px;
+  margin: auto;
+}
+
 a {
   text-decoration: none;
 }
