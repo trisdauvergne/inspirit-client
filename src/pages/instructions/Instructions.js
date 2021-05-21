@@ -6,7 +6,7 @@ const Instructions = () => {
   return (
     <section className="section">
       <Link to="/about">
-        <button className="nav-btn">Back to about</button>
+        <button className="nav-btn btn-hover">Back to about</button>
       </Link>
       <section className="intro-pages intro-pages--less-margin">
         <h1 className="heading instructions__heading fade-in">When to use<br/>INSPIRIT</h1>

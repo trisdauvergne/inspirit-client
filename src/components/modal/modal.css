@@ -13,7 +13,32 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color:white; */
-  padding: 50px;
   z-index: 1000;
+}
+
+.modal-instructions {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px rgba(240, 248, 255, 0.9);
+  border-radius: 10px;
+}
+
+.modal-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  align-self: flex-end;
+}
+
+.modal-btn:hover {
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(38, 87, 194, 0.192),
+    0 0 30px rgba(40, 98, 223, 0.3),
+    0 0 12px rgba(116, 114, 255, 0.2),
+    0 0 21px rgba(118, 184, 255, 0.2),
+    0 0 34px rgba(87, 71, 235, 0.2),
+    0 0 54px rgba(255, 255, 255, 0.2);
 }
