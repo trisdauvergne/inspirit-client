@@ -56,7 +56,7 @@ const Nav = () => {
         <div className="modal modal-instructions">
           <button className="modal-btn" onClick={() => setInstructionsOpen(false)}>x</button>
           <div className="modal-instructions__txt">
-            <p>Use Inspirit to remind yourself of everything you have achieved when impostor syndrome creeps in.</p>
+            <p>Use Inspirit when impostor syndrome creeps in, to remind yourself of everything you have achieved.</p>
             <br/>
             <p>Click on the 'Add a note' button and leave yourself a note.</p>
             <br/>

@@ -4,7 +4,8 @@
   width: 200px;
   height: 120px;
   margin: auto;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
+  margin-bottom: 2rem;
   box-shadow: 5px 5px 15px rgba(240, 248, 255, 0.6);
 }
 
